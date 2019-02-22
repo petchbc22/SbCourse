@@ -1,0 +1,34 @@
+dataArrayz =[  
+    {  
+       title:"First Element",
+       content:"http://192.168.1.111/dev/cafe.mp4",
+       thumbnail:"http://192.168.1.111/dev/2000000001_480px.jpg"
+    },
+    {  
+       title:"Second Element",
+       content:"http://192.168.1.111/dev/cafe2.mp4",
+       thumbnail:"http://192.168.1.111/dev/Triumph-Street-Tracker-600x400.jpg"
+    },
+    {  
+       title:"Third Element",
+       content:"http://192.168.1.111/dev/cafe3.mp4",
+       thumbnail:"http://192.168.1.111/dev/what-makes-a-scrambler-5.jpg"
+    }
+ ]; 
+   Round1 =[  
+    {  
+       title:"aaa",
+       content:"http://192.168.1.111/dev/cafe.mp4",
+       thumbnail:"http://192.168.1.111/dev/2000000001_480px.jpg"
+    },
+    {  
+       title:"bbb",
+       content:"http://192.168.1.111/dev/cafe2.mp4",
+       thumbnail:"http://192.168.1.111/dev/Triumph-Street-Tracker-600x400.jpg"
+    },
+    {  
+       title:"ccc",
+       content:"http://192.168.1.111/dev/cafe3.mp4",
+       thumbnail:"http://192.168.1.111/dev/what-makes-a-scrambler-5.jpg"
+    }
+ ];
