@@ -2,6 +2,7 @@ import React from 'react';
 import {View,StyleSheet,FlatList,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,Text ,RefreshControl } from 'react-native';
 import { TabNavigator,StackNavigator } from 'react-navigation';
 import {  Header,Container,Content,Card, CardItem, Thumbnail, Footer, Tab, Tabs,FooterTab, Button,Input,Item, Icon } from 'native-base'
+import styles from './customstyle';
 // import { FlatGrid } from 'react-native-super-grid';
 import { Feeds } from './Feeds';
 
@@ -40,12 +41,12 @@ class CourseScreen extends React.Component {
                             <TouchableOpacity onPress={() => this.props.navigation.navigate("Subcoursefrist")}>
                                 <ImageBackground source={require('../img/phone-802125_1280.jpg')} style={styles.bgimgContentfrist}>
                                     <View style={styles.headingcontent}>
-                                        <Text style={[styles.textwhite,styles.fontbold,styles.f16]}>February 08, 2019</Text>
-                                        <Text style={[styles.textwhite,styles.fontbold,styles.f25]}>Photography With My Phone</Text>
+                                        <Text style={[styles.textwhite,styles.textbold,styles.text_16]}>February 08, 2019</Text>
+                                        <Text style={[styles.textwhite,styles.textbold,styles.text_25]}>Photography With My Phone</Text>
                                     </View>
                                 </ImageBackground>
                             </TouchableOpacity>
-                            <Text style={[styles.pd10 , styles.f16, styles.textblack]}>Explore</Text>
+                            <Text style={[styles.pd10 , styles.text_16, styles.text_black,styles.textbold]}>Explore</Text>
 
                             <View style={styles.imagebutton}>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate("Subcourseprogram")}>
@@ -85,22 +86,22 @@ class CourseScreen extends React.Component {
                     >
                     <ScrollView style={styles.bggray}>
                         <View style={styles.pd15}>
-                            <Text style={[styles.fontbold,styles.f20,styles.textblack]}>
+                            <Text style={[styles.textbold,styles.text_20,styles.text_black]}>
                                 Bookmarked
                             </Text>
                         </View>
                         <View style={styles.listsaved}>
-                            <Text style={[styles.textblack,styles.f18]}>
+                            <Text style={[styles.text_black,styles.text_18]}>
                                 Programs (0)
                             </Text>
                         </View>
                         <View style={styles.listsaved}>
-                            <Text style={[styles.textblack,styles.f18]}>
+                            <Text style={[styles.text_black,styles.text_18]}>
                                 Techniques (0)
                             </Text>
                         </View>
                         <View style={styles.listsaved}>
-                            <Text style={[styles.textblack,styles.f18]}>
+                            <Text style={[styles.text_black,styles.text_18]}>
                                 Daily Workouts (0)
                             </Text>
                         </View>
@@ -151,37 +152,37 @@ class ProfileScreen extends React.Component {
     render() {
         return (
             <Container>
-                <Header transparent style={{height:210}}>
+                <Header transparent style={styles.header_pf}>
                 <Content>
-                    <View style={{flex:1}}>
-                        <View style={{flexDirection: "row", flex: 1,padding:0,borderBottomColor:'#dcdcdc',borderBottomWidth:0.5,paddingTop:20,paddingLeft:10,paddingRight:10,paddingBottom:10}}>
-                            <View style={{width: '30%',height:90,justifyContent:'center'}}>
-                                <Image style={{width: 85,height:85,borderRadius: 150/2}}source={require('../img/profile.jpg')}/>
+                    <View style={styles.flex_1}>
+                        <View style={styles.flex3_header}>
+                            <View style={styles.subflex3_img}>
+                                <Image style={styles.imgprofile} source={require('../img/profile.jpg')}/>
                             </View>
-                            <View style={{width: '50%',height:90, justifyContent: 'center'}}>
-                                <Text style={{fontSize:20,fontWeight:'bold',color:'#000'}}>Petch-BC22</Text>
+                            <View style={styles.subflex3_username}>
+                                <Text style={[styles.text_20,styles.textbold,styles.text_black]}>Petch-BC22</Text>
                             </View>
-                            <View style={{width: '20%', alignItems: 'center',height:90, justifyContent: 'center',alignItems:'flex-end'}}>
+                            <View style={styles.subflex3_settingico}>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate("SettingProfile")}>
-                                    <Icon name='settings'style={{color:'#cdcdcd',fontSize:24}} /> 
+                                    <Icon name='settings'style={[styles.text_gray,styles.text_24]} /> 
                                 </TouchableOpacity>
                             </View>
                         </View>
-                        <View style={{flexDirection: "row", flex: 1,paddingTop:10}}>
-                            <View style={{width: '33%',alignSelf:'center'}}>
-                                <Text style={{textAlign:'center',fontSize:18,color:'black',fontWeight:'bold'}}>5</Text>
-                                <Text style={{textAlign:'center',fontWeight:'bold'}}>Posts</Text>
+                        <View style={[styles.flex_row,styles.flex_1,styles.pt10]}>
+                            <View style={{width: '33%'}}>
+                                <Text style={[styles.text_center,styles.text_18,styles.textbold,styles.text_black]}>5</Text>
+                                <Text style={[styles.text_center,styles.textbold]}>Posts</Text>
                             </View>
                             <View style={{width: '33%'}}>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate("FollowScreen")}>
-                                    <Text style={{textAlign:'center',fontSize:18,color:'black',fontWeight:'bold'}}>0</Text>
-                                    <Text style={{textAlign:'center',fontWeight:'bold'}}>Followers</Text>
+                                    <Text style={[styles.text_center,styles.text_18,styles.textbold,styles.text_black]}>0</Text>
+                                    <Text style={[styles.text_center,styles.textbold]}>Followers</Text>
                                 </TouchableOpacity>
                             </View>
                             <View style={{width: '33%'}}>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate("FollowingScreen")}>
-                                    <Text style={{textAlign:'center',fontSize:18,color:'black',fontWeight:'bold'}}>18</Text>
-                                    <Text style={{textAlign:'center',fontWeight:'bold'}}>Following</Text>
+                                    <Text style={[styles.text_center,styles.text_18,styles.textbold,styles.text_black]}>18</Text>
+                                    <Text style={[styles.text_center,styles.textbold]}>Following</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -216,7 +217,7 @@ export default TabNavigator({
         tabBarComponent: props => {
             return (
                 <Footer>
-                    <FooterTab style={{backgroundColor:'black'}}>
+                    <FooterTab style={styles.bgblack}>
                         <Button
                             active={props.navigationState.index === 0}
                             onPress={() => props.navigation.navigate("FeedScreen")}>
@@ -238,145 +239,4 @@ export default TabNavigator({
             );
         }
     });
-    const {height, width} = Dimensions.get('window');
-    const itemWidth = (width - 5) / 3;
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-        },
-        backgroundImage: {
-            flex: 1,
-            resizeMode: 'cover', 
-            top: 0,
-            bottom:0
-           // or 'stretch'
-        },
-        overlay:{
-          backgroundColor:'rgba(0,0,0,.3)',
-          position: 'absolute', 
-          top: 0, 
-          bottom: 0, 
-          left: 0, 
-          right: 0,
-          justifyContent: 'center',
-          alignItems: 'center',
-        },
-        bggray:{
-            backgroundColor:'#f7f7f7'
-        },
-        Form:{
-          backgroundColor:'transparent',
-          marginTop:10,
-          color:'white',
-        },
-        tabcustom : {
-          backgroundColor:'transparent',
-
-          justifyContent: 'center',
-          alignSelf:'center',
-        },
-        styletextinput:{
-          textAlign: 'center',
-          color:'#fff',
-          fontSize:14
-        },
-        textwhite:{
-          color:'white'
-        },
-        fontbold:{
-            fontWeight:'bold'
-        },
-        btnstyle:{
-          borderRadius:30,width:200,justifyContent:'center'
-        },
-        pd10:{
-            padding:10
-        },
-        pd15:{
-            padding:15
-        },
-        f20:{
-            fontSize:20,
-            fontWeight:'bold'
-        },
-        f15:{
-            fontSize:15
-        },
-        f16:{
-            fontSize:16,
-            fontWeight:'bold'
-        },
-        f18:{
-            fontSize:18
-        },
-        f19:{
-            fontSize:19
-        },
-        f25:{
-          fontSize:25  
-        },
-        textblack:{
-            color:'black'
-        },
-        bgwhite:{
-            backgroundColor:'#fff'
-        },
-        bgblack:{
-            backgroundColor:'#000'
-        },
-        tabheader:{
-            backgroundColor:'transparent',justifyContent: 'center',paddingTop:24,height:70
-        },
-        subtabheader:{
-            backgroundColor:'#fff',width:100
-        },
-        textintab:{
-            color:'#bdb9b9',fontSize:20,fontWeight:'bold'
-        },
-        textintabActive:{
-            color:'#000',fontSize:20,fontWeight:'bold'
-        },
-        bgimgContentfrist:{
-            width: '100%', height: 250,marginLeft: 0, paddingLeft: 0, paddingRight: 0, marginRight: 0,marginTop:0
-        },
-        headingcontent:{
-            flex:1,justifyContent: 'center',alignItems: 'flex-start',paddingLeft:20
-        },
-        imagebutton:{
-            justifyContent:'center',marginLeft:10,marginRight:10
-        },
-        pt15:{
-            paddingTop:15
-        },
-        pb15:{
-            paddingBottom:15
-        },
-        viewtextinsub:{
-            flex:1,justifyContent: 'center',alignItems: 'flex-start',paddingLeft:15
-        },
-        textinsubmenu:{
-            color:'white',fontSize:25,fontWeight:'bold',paddingTop:40
-        },
-        styleimgBtn:{
-            width: '100%', height: 120,alignSelf:'center'
-        },
-        listsaved:{
-            padding:15,backgroundColor:'white',borderBottomColor:'#efefef',borderBottomWidth:1
-        },
-        gridView: {
-            flex: 1,
-        },
-        itemContainer: {
-            justifyContent: 'center',
-            alignItems:'center',
-            borderRadius: 5,
-            padding:2,
-            height:110
-        },
-        imageThumbnail: {
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: 120,
-            maxWidth:itemWidth,
-          },
-    });
+    
