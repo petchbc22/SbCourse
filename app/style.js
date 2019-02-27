@@ -72,8 +72,14 @@ const StyleCss = StyleSheet.create({
   btnview:{
     paddingTop:20,flex:1,alignItems: 'center',alignSelf:'center'
   },
+  btnviewsc:{
+    flex:1,alignItems: 'center',alignSelf:'center'
+  },
   pt20:{
     paddingTop:20
+  },
+  viewinput:{
+    marginTop:15,paddingLeft:10
   }
  
 });

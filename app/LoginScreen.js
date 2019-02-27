@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity } from 'react-native';
 import { Container, Content, Footer, FooterTab, Button,Tab, Tabs, TabHeading, Icon, Text ,ScrollableTab,Form, Item, Input, Label   } from 'native-base';
 import { StackNavigator, TabNavigator, DrawerNavigator  } from  'react-navigation';
+import { SocialIcon } from 'react-native-elements'
 
 class SplashScreen extends React.Component {
   render() {
@@ -76,9 +77,19 @@ class LoginScreen extends Component {
                       </Item>
                       <View style={styles.btnview}>
                           <Button style={styles.btnstyle} onPress={() => this.props.navigation.navigate("CourseScreen")}>
-                          <Text >Login</Text>
+                            <Text >Login</Text>
                           </Button>
+                          {/* <SocialIcon
+                            style={styles.btnstyle}
+                            title='Sign In With Facebook'
+                            button
+                            type='facebook'
+                          /> */}
+                          <Text style={{color:'#fff',fontWeight:'bold',paddingTop:20}}>Sign in With Facebook</Text>
                       </View>
+                
+                        
+                      
                   </Tab>
                   <Tab 
                     heading=" Register" 

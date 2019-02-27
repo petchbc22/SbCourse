@@ -15,6 +15,8 @@ import SettingProfile from './app/SettingProfile';
 import FollowScreen from './app/FollowScreen';
 import FollowingScreen from './app/FollowingScreen';
 
+import Profile from './app/Profile';
+
 const App = StackNavigator({
   LoginScreen: { 
       screen: LoginScreen,
@@ -61,6 +63,11 @@ const App = StackNavigator({
       screen: FollowingScreen,
       navigationOptions : { header: null },
     },
+
+    Profile: {
+      screen: Profile,
+      navigationOptions : { header: null },
+    } 
 },
 {
   initialRouteName: 'LoginScreen',

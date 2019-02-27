@@ -12,7 +12,8 @@ flex_1:{
 container: {
     flex: 1,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    fontFamily: "Athiti Light",
 },
 flex_row:{
     flexDirection : 'row'
@@ -70,7 +71,9 @@ bgtransparent:{
     backgroundColor:'transparent'
 },
 // fontsize
-
+text_12:{
+    fontSize:12
+},
 text_14:{
     fontSize:14
 },
@@ -457,7 +460,26 @@ boxIntroduction:{
 },
 jtfContent:{
     justifyContent:'center'
-}
+},
+btnFollowstyle:{
+    borderRadius:30,width:'100%',justifyContent:'center',height:30
+  }, 
+btnFollowview:{
+    justifyContent:'center',flex:1,alignItems: 'center',alignSelf:'center'
+},
+// รูปโปรไฟล์ในหน้า follows
+imgProfile_fl:{
+    width: 60,height:60,borderRadius: 60/2
+},
+customfont:{
+     fontFamily: 'Athiti-Light'
+},
+imageViewContainer: {
+    width: 200,
+    height: 200 ,
+    margin: 10,
+    borderRadius : 10
+  },
 });
 
 

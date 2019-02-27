@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
 import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,TouchableHighlight} from 'react-native';
 import { Title,Body,Header,Container, Content, Footer, FooterTab, Button,Tab, Tabs, TabHeading, Icon, Text ,ScrollableTab,Form, Item, Input, Label,Left,Right   } from 'native-base';
-// import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { StackNavigator, TabNavigator, DrawerNavigator,NavigationActions  } from  'react-navigation';
-import { HomeScreen } from './HomeScreen';
-import SegmentedControlTab from "react-native-segmented-control-tab";
-import CircleButton from 'react-native-circle-button';
-import PercentageCircle from 'react-native-percentage-circle';
-
+import styles from './customstyle'
 class FollowingScreen extends Component {
 
     navigateToScreen = (route) => () => {
@@ -34,19 +29,15 @@ class FollowingScreen extends Component {
       const {goBack} = this.props.navigation;
     return (
         <Container>
-            {/* <ImageBackground source={require('../img/bg-course.jpg')}style={styles.backgroundImage} > */}
-            {/* <Header style={{backgroundColor:'transparent',elevation:0,height:80}}>
-                <Image style={{width: 20, height: 20,alignSelf: 'center'}}source={ require('../img/left-icon.png') } />
-            </Header> */}
-            <Header style={{backgroundColor:'transparent',elevation:0,height:80,paddingTop:30}}>
-            <Left style={{paddingLeft:10}}>
+            <Header style={styles.header_nobg}>
+            <Left style={styles.pl10}>
                 <TouchableOpacity onPress={() => goBack()}>
-                    <Image style={{width: 20, height: 20}}source={ require('../img/left-ico-b.png') } />
+                    <Icon name="arrow-back" />
                 </TouchableOpacity>
             </Left>
             <Body>
                 <View>
-                    <Text style={{fontSize:20,fontWeight:'bold'}}>Following</Text>
+                    <Text style={[styles.customfont,styles.textbold,styles.text_20]}>ผู้ติดตาม</Text>
                 </View>
             </Body>
             <Right>
@@ -54,32 +45,46 @@ class FollowingScreen extends Component {
             </Header>
             <Content style={styles.bggray}>
                 <View style={{flex: 1, flexDirection: 'row',backgroundColor: '#fff',borderBottomWidth:0.5,borderBottomColor:'#dcdcdc',borderTopWidth:0.5,borderTopColor:'#dcdcdc'}}>
-                    <View style={{width: '20%',padding:10,justifyContent:'center'}}>
-                        <Image style={{width: 60,height:60,borderRadius: 60/2}}source={require('../img/profile.jpg')}/>
+                    <View style={[{width: '20%'},styles.pd10,styles.jtfContent]}>
+                        <Image style={styles.imgProfile_fl}source={require('../img/profile.jpg')}/>
                     </View>
-                    <View style={{width: '50%',padding:10,justifyContent:'center'}}>
+                    <View style={[{width:'50%'},styles.pd10,styles.jtfContent]}>       
                         <Text style={{fontSize:16,color:'#000',fontWeight:'bold'}}>Chirs Evan</Text>
                     </View>
-                    <View style={{width: '30%',paddingRight:10,justifyContent:'center',alignItems:'flex-end'}}>
-                        <View style={styles.btnview}>
-                            <Button style={styles.btnstyle} onPress={() => this.props.navigation.navigate("#")}>
-                            <Text style={{fontSize:12,fontWeight:'bold'}}>Unfollows</Text>
+                    <View style={[{width: '30%'},styles.pr10,styles.centerYlrightX]}>
+                        <View style={styles.btnFollowview}>
+                            <Button style={styles.btnFollowstyle} onPress={() => this.props.navigation.navigate("#")}>
+                            <Text style={[styles.text_12,styles.textbold]}>Unfollows</Text>
                             </Button>
                         </View>
                     </View>
                 </View>
-        
-                <View style={{flex: 1, flexDirection: 'row',backgroundColor: '#fff',borderBottomWidth:0.5,borderBottomColor:'#dcdcdc'}}>
-                    <View style={{width: '20%',padding:10,justifyContent:'center'}}>
-                        <Image style={{width: 60,height:60,borderRadius: 60/2}}source={require('../img/profile.jpg')}/>
+                <View style={{flex: 1, flexDirection: 'row',backgroundColor: '#fff',borderBottomWidth:0.5,borderBottomColor:'#dcdcdc',borderTopWidth:0.5,borderTopColor:'#dcdcdc'}}>
+                    <View style={[{width: '20%'},styles.pd10,styles.jtfContent]}>
+                        <Image style={styles.imgProfile_fl}source={require('../img/10866101.jpg')}/>
                     </View>
-                    <View style={{width: '50%',padding:10,justifyContent:'center'}}>
-                        <Text style={{fontSize:16,color:'#000',fontWeight:'bold'}}>Chirs Evan</Text>
+                    <View style={[{width:'50%'},styles.pd10,styles.jtfContent]}>       
+                        <Text style={{fontSize:16,color:'#000',fontWeight:'bold'}}>Tony Stark</Text>
                     </View>
-                    <View style={{width: '30%',paddingRight:10,justifyContent:'center',alignItems:'flex-end'}}>
-                        <View style={styles.btnview}>
-                            <Button style={styles.btnstyle} onPress={() => this.props.navigation.navigate("#")}>
-                            <Text style={{fontSize:12,fontWeight:'bold'}}>Unfollows</Text>
+                    <View style={[{width: '30%'},styles.pr10,styles.centerYlrightX]}>
+                        <View style={styles.btnFollowview}>
+                            <Button style={styles.btnFollowstyle} onPress={() => this.props.navigation.navigate("#")}>
+                            <Text style={[styles.text_12,styles.textbold]}>Unfollows</Text>
+                            </Button>
+                        </View>
+                    </View>
+                </View>
+                <View style={{flex: 1, flexDirection: 'row',backgroundColor: '#fff',borderBottomWidth:0.5,borderBottomColor:'#dcdcdc',borderTopWidth:0.5,borderTopColor:'#dcdcdc'}}>
+                    <View style={[{width: '20%'},styles.pd10,styles.jtfContent]}>
+                        <Image style={styles.imgProfile_fl}source={require('../img/ddd.jpg')}/>
+                    </View>
+                    <View style={[{width:'50%'},styles.pd10,styles.jtfContent]}>       
+                        <Text style={{fontSize:16,color:'#000',fontWeight:'bold'}}>Thor son of odin </Text>
+                    </View>
+                    <View style={[{width: '30%'},styles.pr10,styles.centerYlrightX]}>
+                        <View style={styles.btnFollowview}>
+                            <Button style={styles.btnFollowstyle} onPress={() => this.props.navigation.navigate("#")}>
+                            <Text style={[styles.text_12,styles.textbold]}>Unfollows</Text>
                             </Button>
                         </View>
                     </View>
@@ -89,127 +94,5 @@ class FollowingScreen extends Component {
     );
   }
 }
-const BASE_SIZE = 300
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent:'center',
-        alignItems:'center'
-    },
-    backgroundImage: {
-        flex: 1,
-        resizeMode: 'cover', 
-        height:100
-       // or 'stretch'
-    },
-    bggray:{
-        backgroundColor:'#f7f7f7'
-    },
-    pd:{
-        padding:10
-    },
-    boxview:{
-        width: '100%', 
-        height: 70,
-        alignSelf:'center',
-        borderRadius:5,
-        backgroundColor:'white',
-        marginLeft:15,
-        marginRight:15,
-        borderWidth: 1,
-        borderColor: '#ddd',
-        borderBottomWidth: 2,
-        borderTopWidth: 0,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
-        elevation: 1,
-    },
-    circlenb:{
-        borderRadius:20,
-        width: 40,
-        height: 40,
-        backgroundColor:'#000',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 10,
-    },
-    tabcustom : {
-      backgroundColor:'transparent',
-      width:'80%',
-      justifyContent: 'center',
-      alignSelf:'center'
-    },
-    styletextinput:{
-      textAlign: 'center',
-      color:'#fff',
-      fontSize:14
-    },
-    textwhite:{
-      color:'white'
-    },
-    btnstyle:{
-      borderRadius:30,width:200,justifyContent:'center'
-    },
-    // controlTab
-    tabsContainerStyle: {
-      //custom styles
-    },
-    tabStyle: {
-      backgroundColor : 'transparent',
-      borderColor: '#fff',
-      height:40
-    },
-    tabTextStyle: {
-      color:'#fff',
-      fontWeight:'bold',
-      fontSize:16
-    },
-    activeTabStyle: {
-      backgroundColor : 'white'
-    },
-    activeTabTextStyle: {
-      color:'#000',
-      fontWeight:'bold',
-      fontSize:16
-    },
-    tabBadgeContainerStyle: {
-      //custom styles
-    },
-    activeTabBadgeContainerStyle: {
-      //custom styles
-    },
-    tabBadgeStyle: {
-      //custom styles
-    },
-    activeTabBadgeStyle: {
-      //custom styles
-    },
-    circle: {
 
-      width:BASE_SIZE*0.6,
-      height:BASE_SIZE*0.6, // 60% of the base size
-      borderRadius: BASE_SIZE*0.6/2,
-      backgroundColor: 'transparent',
-      borderColor:'white',
-      borderWidth:1
-  },
-  Text18B :{
-    fontSize:22,
-    fontWeight:'bold'
-  },
-  textbold:{
-      fontWeight:'bold'
-  },
-  btnstyle:{
-    borderRadius:30,width:'100%',justifyContent:'center',height:30
-  }, 
-  btnview:{
-    justifyContent:'center',flex:1,alignItems: 'center',alignSelf:'center'
-  },
-  pt10:{
-      paddingTop:10
-  }
-  });
 export default FollowingScreen;

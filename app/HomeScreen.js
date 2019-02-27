@@ -5,7 +5,7 @@ import {  Header,Container,Content,Card, CardItem, Thumbnail, Footer, Tab, Tabs,
 import styles from './customstyle';
 // import { FlatGrid } from 'react-native-super-grid';
 import { Feeds } from './Feeds';
-
+import { Profile } from './Profile';
 
 navigateToScreen = (route) => () => {
     const navigateAction = NavigationActions.navigate({
@@ -18,7 +18,7 @@ class FeedScreen extends React.Component {
     render() {
         return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Feeds />
+               <Feeds/>
             </View>
         );
     }
@@ -114,102 +114,20 @@ class CourseScreen extends React.Component {
 }
 
 class ProfileScreen extends React.Component {
-    
-    navigateToScreen = (route) => () => {
-        const navigateAction = NavigationActions.navigate({
-          routeName: route
-        });
-        this.props.navigation.dispatch(navigateAction);
-      }
-      constructor(props) {
-        super(props);
-        this.state = {
-          refreshing: false,
-        };
-      }
-      _onRefresh = () => {
-        this.setState({refreshing: true});
-        fetchData().then(() => {
-          this.setState({refreshing: false});
-        });
-      }
-      componentDidMount() {
-        
-        return fetch('http://192.168.1.111/sbcourse/ImagesList.php')
-          .then((response) => response.json())
-          .then((responseJson) => {
-            this.setState({
-              isLoading: false,
-              dataSource: responseJson
-            }, function() {
-              // In this block you can do something with new state.
-            });
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      }
     render() {
         return (
-            <Container>
-                <Header transparent style={styles.header_pf}>
-                <Content>
-                    <View style={styles.flex_1}>
-                        <View style={styles.flex3_header}>
-                            <View style={styles.subflex3_img}>
-                                <Image style={styles.imgprofile} source={require('../img/profile.jpg')}/>
-                            </View>
-                            <View style={styles.subflex3_username}>
-                                <Text style={[styles.text_20,styles.textbold,styles.text_black]}>Petch-BC22</Text>
-                            </View>
-                            <View style={styles.subflex3_settingico}>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate("SettingProfile")}>
-                                    <Icon name='settings'style={[styles.text_gray,styles.text_24]} /> 
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-                        <View style={[styles.flex_row,styles.flex_1,styles.pt10]}>
-                            <View style={{width: '33%'}}>
-                                <Text style={[styles.text_center,styles.text_18,styles.textbold,styles.text_black]}>5</Text>
-                                <Text style={[styles.text_center,styles.textbold]}>Posts</Text>
-                            </View>
-                            <View style={{width: '33%'}}>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate("FollowScreen")}>
-                                    <Text style={[styles.text_center,styles.text_18,styles.textbold,styles.text_black]}>0</Text>
-                                    <Text style={[styles.text_center,styles.textbold]}>Followers</Text>
-                                </TouchableOpacity>
-                            </View>
-                            <View style={{width: '33%'}}>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate("FollowingScreen")}>
-                                    <Text style={[styles.text_center,styles.text_18,styles.textbold,styles.text_black]}>18</Text>
-                                    <Text style={[styles.text_center,styles.textbold]}>Following</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-                    </View>
-                </Content>
-                </Header>
-                <Content>
-                    <FlatList
-                        data={ this.state.dataSource }
-                        renderItem={({item}) => 
-                        <View style={{flex:1, flexDirection: 'column', margin:1 }}> 
-                            <Image style={styles.imageThumbnail} source = {{ uri: item.images }} />
-                        </View>                         
-                        }
-                        numColumns = { 3 }
-                       
-                        />
-                </Content>
-            </Container>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <Profile />
+            </View>
         );
     }
 }
 
 export default TabNavigator({
-    FeedScreen : { screen: FeedScreen },
+    FeedScreen : { screen: FeedScreen  },
     CourseScreen : { screen: CourseScreen },
-    ProfileScreen : { screen: ProfileScreen }
+    ProfileScreen : { screen: Profile },
+
 },
     {
         tabBarPosition: 'bottom',
