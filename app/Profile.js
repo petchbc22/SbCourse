@@ -1,36 +1,26 @@
 import React, { Component } from 'react';
-
-import {ActivityIndicator,ListView,View,StyleSheet,FlatList,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,Text ,RefreshControl } from 'react-native';
-
-import {  Header,Container,Content,Card, CardItem, Thumbnail, Footer, Tab, Tabs,FooterTab, Button,Input,Item, Icon,Left,Right,Body } from 'native-base'
+import {ActivityIndicator,ListView,View,StyleSheet,FlatList,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,Text ,RefreshControl,Picker} from 'react-native';
+import {  Header,Container,Content,Card, CardItem, Thumbnail, Footer, Tab, Tabs,FooterTab, Button,Input,Item, Icon,Left,Right,Body,List} from 'native-base'
 import styles from './customstyle';
 import { StackNavigator } from 'react-navigation';
 import { fromRight } from 'react-navigation-transitions';
-const DeviceWidth = Dimensions.get('window').width
-class Profile extends React.Component {
 
+const DeviceWidth = Dimensions.get('window').width
+
+class Profile extends React.Component {
     static navigationOptions =
     {
          header: null 
     };
-
     constructor(props) {
-
         super(props);
-
         this.state = {
-
           isLoading: true
         }
       }
-
     OpenSecondActivity(id) {
-       
         this.props.navigation.navigate('Second', { ListViewClickItemHolder: id });
-    
       }
-     
-     
       componentDidMount() {
      
         return fetch('http://192.168.1.111/sbcourse/ImagesList.php')
@@ -47,21 +37,7 @@ class Profile extends React.Component {
           .catch((error) => {
             console.error(error);
           });
-      }
-     
-      ListViewItemSeparator = () => {
-        return (
-          <View
-            style={{
-              height: .5,
-              width: "100%",
-              backgroundColor: "#000",
-            }}
-          />
-        );
-      }
-     
-     
+      } 
       render() {
         if (this.state.isLoading) {
           return (
@@ -115,12 +91,12 @@ class Profile extends React.Component {
                   dataSource={this.state.dataSource}
                   contentContainerStyle={{flexDirection: 'row',flexWrap: 'wrap',alignItems:'center'}}
                   renderRow={(rowData) => 
-                      <TouchableOpacity  onPress={this.OpenSecondActivity.bind(this,rowData.id)}>
-                        <Image 
-                          source = {{ uri: rowData.images }} 
-                          style={{  width: DeviceWidth*0.33, height: DeviceWidth*0.33,margin:0.5}} 
-                        />
-                      </TouchableOpacity>
+                    <TouchableOpacity  onPress={this.OpenSecondActivity.bind(this,rowData.id)}>
+                      <Image 
+                        source = {{ uri: rowData.images }} 
+                        style={{width: DeviceWidth*0.33, height: DeviceWidth*0.33,margin:0.5}} 
+                      />
+                    </TouchableOpacity>
                 }
               />
             </Content>
@@ -186,7 +162,7 @@ class SecondActivity extends Component
  render() {
     return(
       <Container>
-        <Header style={styles.header_nobg}>
+        <Header style={[{elevation:1},styles.header_with_bdb]}>
           <Left style={styles.pl10}>
               <TouchableOpacity onPress={() => this.props.navigation.navigate("ProfileScreen")}>
                   <Icon name="arrow-back" />
@@ -194,21 +170,52 @@ class SecondActivity extends Component
           </Left>
           <Body>
               <View>
-                  <Text style={[styles.textbold,styles.text_20]}>Follow</Text>
+                  <Text style={[styles.textbold,styles.text_20,styles.text_black]}>Post details</Text>
               </View>
           </Body>
           <Right>
           </Right>
         </Header>
-        <Content style={[styles.bggray,styles.pd]}>
-            <View style = { styles.MainContainer }>
+        <Content style={styles.bggray}>
+            <View style={[styles.flex_row,styles.flex_1,styles.pd10,styles.bgwhite,{marginTop:5}]}>
+                <View style={{width: '20%'}}>
+                  <View>
+                      <Image style={styles.imgprofilesub} source={require('../img/profile.jpg')}/>
+                  </View>
+                </View>
+                <View style={[{width: '60%'},styles.jtfContent]}>
+                    <Text style={[styles.text_16,styles.textbold,styles.text_black]}>PETCH BC-22</Text>
+                    <Text style={styles.text_12}>{this.state.date}</Text>
+                </View>
+                <View style={[{width: '20%'},styles.jtfContent]}>
+                    <Picker
+                        selectedValue={this.state.menu}
+                        onValueChange={(itemValue, itemIndex) => this.setState({menu:emValue})}
+                        mode="dropdown">
+                        <Picker.Item label="Edit" value="addnote" />
+                        <Picker.Item label="Delete" value="share" />
+                    </Picker>
+                </View>
+            </View>
+            <View style={styles.bgwhite}>
+              <Image 
+                source = {{ uri: this.state.images }} 
+                style={{width:'100%',height:400}} 
+              />
+            </View>
+            <View style={[styles.pd10,styles.bgwhite]}>
+              <Text style={[styles.text_black,styles.text_16]}>
+                {this.state.name}
+              </Text>
+            </View>
+            {/* <View>
               <View style={{flex:1, flexDirection: 'column'}} >
                 <Text style={styles.textViewContainer} > {'id = ' + this.state.id} </Text>
                 <Text style={styles.textViewContainer} > {'Name = ' + this.state.name} </Text>
                 <Text style={styles.textViewContainer} > {'Department = ' + this.state.images} </Text>
                 <Text style={styles.textViewContainer} > {'Semester = ' + this.state.date} </Text>
               </View>
-            </View>
+            </View> */}
         </Content>
     </Container>
     );

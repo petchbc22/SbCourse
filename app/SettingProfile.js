@@ -136,27 +136,22 @@ class SettingProfile extends Component {
                 <Text style={styles.Text14B}>Settings</Text>
               </View>
               <View style={styles.listProfile}>
-                <View style={styles.fullcol}>
-                    <Text style={[styles.text_14,styles.text_black]}>Terms and conditions</Text>
-                </View>
-              </View>
-              <View style={styles.listProfile}>
-                <View style={styles.fullcol}>
+                <TouchableOpacity style={styles.fullcol}onPress={() => this.props.navigation.navigate("AboutScreen")}>
                     <Text style={[styles.text_14,styles.text_black]}>About us</Text>
-                </View>
+                </TouchableOpacity>
               </View>
               <View style={styles.listProfile}>
                 <View style={styles.fullcol}>
                     <Text style={[styles.text_14,styles.text_black]}>Version 1.0</Text>
                 </View>
               </View>
-              <View style={styles.btnview}>
+              <View style={[styles.btnview,styles.pb15]}>
                 <Button style={styles.btnstyle} onPress={() => this.props.navigation.navigate("CourseScreen")}>
                   <Text style={styles.textbold}>Save Changes</Text>
                 </Button>
               </View>
           
-            </Content>
+            </Content >
           </Container>
     );
   }

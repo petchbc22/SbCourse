@@ -1,7 +1,8 @@
 import { StyleSheet ,Dimensions } from 'react-native';
 
 const BASE_SIZE = 300
-
+const DeviceWidth = Dimensions.get('window').width
+const DeviceHeight = Dimensions.get('window').height
 const {height, width} = Dimensions.get('window');
 const itemWidth = (width - 5) / 3;
 export default StyleSheet.create({
@@ -24,9 +25,19 @@ text_center:{
 icoinhd:{
     width:19,height:20
 },
+itemCenter:{
+    alignItems:'center'
+},
 // ส่วนheader สำหรับ header ที่ไม่มี background 
 header_nobg:{
     backgroundColor:'transparent',elevation:0,height:80,paddingTop:30
+},
+// ส่วนheader สำหรับ header มี borderbottom 
+header_with_bdb:{
+    backgroundColor:'transparent',height:80,paddingTop:30
+},
+header_not_set_h:{
+    backgroundColor:'transparent',elevation:0
 },
 // headerprofiletab
 header_pf:{
@@ -174,6 +185,9 @@ pr10:{
 },
 pr15:{
     paddingRight:15
+},
+mb15:{
+    marginBottom:15
 },
 py10:{
 paddingTop:10,
@@ -374,8 +388,8 @@ backgroundImagefull: {
 },
 circleButtonStart:{
     borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
-    width: Dimensions.get('window').width * 0.4,
-    height: Dimensions.get('window').width * 0.4,
+    width: Dimensions.get('window').width * 0.38,
+    height: Dimensions.get('window').width * 0.38,
     backgroundColor:'white',
     justifyContent: 'center',
     alignItems: 'center',
@@ -389,7 +403,7 @@ circleButtonStart:{
     shadowOpacity: 1.0
 },
 pushText70:{
-    paddingTop:20,paddingLeft:20,paddingRight:20,paddingTop:'70%'
+    paddingTop:20,paddingLeft:20,paddingRight:20,paddingTop:DeviceHeight / 3
 },
 buttonRow:{
     flex: 1, flexDirection: 'row',paddingTop:40,alignItems:'center',justifyContent:'center'
@@ -480,6 +494,11 @@ imageViewContainer: {
     margin: 10,
     borderRadius : 10
   },
+imgprofilesub:{
+    width:50,
+    height:50,
+    borderRadius: 25
+}
 });
 
 

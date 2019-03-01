@@ -47,7 +47,7 @@ class PullupScreen extends Component {
             </Header>
             <Content style={[styles.bggray,styles.pd10]}>
                 <View style={[styles.pt10,styles.jtfContent]}>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("PullupSubScreen")}>
                         <View style={styles.boxview}>
                             <View style={[styles.flex_1,styles.flex_row]}>
                                 <View style={[{width:'20%'},styles.centerYleftX,styles.pl15]}>

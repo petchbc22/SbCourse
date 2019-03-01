@@ -14,8 +14,9 @@ import PullupScreen from './app/PullupScreen';
 import SettingProfile from './app/SettingProfile';
 import FollowScreen from './app/FollowScreen';
 import FollowingScreen from './app/FollowingScreen';
-
+import AboutScreen from './app/AboutScreen';
 import Profile from './app/Profile';
+import PullupSubScreen from './app/PullupSubScreen';
 
 const App = StackNavigator({
   LoginScreen: { 
@@ -66,6 +67,15 @@ const App = StackNavigator({
 
     Profile: {
       screen: Profile,
+      navigationOptions : { header: null },
+    } ,
+    
+    AboutScreen: {
+      screen: AboutScreen,
+      navigationOptions : { header: null },
+    } ,
+    PullupSubScreen: {
+      screen: PullupSubScreen,
       navigationOptions : { header: null },
     } 
 },

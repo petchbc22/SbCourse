@@ -121,9 +121,6 @@ class LoginScreen extends Component {
                   </Tab>
               </Tabs>
             </View>
-            <View style={styles.pt20}>
-                <Text style={styles.textwhite} >About Us Storyboard</Text>
-            </View>
         </View>
         </ScrollView>
       </ImageBackground>
