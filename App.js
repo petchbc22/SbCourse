@@ -17,7 +17,7 @@ import FollowingScreen from './app/FollowingScreen';
 import AboutScreen from './app/AboutScreen';
 import Profile from './app/Profile';
 import PullupSubScreen from './app/PullupSubScreen';
-
+import Subcourseprofessional from './app/Subcourseprofessional';
 const App = StackNavigator({
   LoginScreen: { 
       screen: LoginScreen,
@@ -77,11 +77,16 @@ const App = StackNavigator({
     PullupSubScreen: {
       screen: PullupSubScreen,
       navigationOptions : { header: null },
-    } 
+    } ,
+    Subcourseprofessional: {
+      screen: Subcourseprofessional,
+      navigationOptions : { header: null },
+    }
 },
 {
   initialRouteName: 'LoginScreen',
   transitionConfig: () => fromRight(),
+   headerMode: 'none',
 },
 )
 

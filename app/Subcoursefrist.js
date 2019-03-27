@@ -52,7 +52,7 @@ class Subcoursefrist extends Component {
                   tabTextStyle={styles.tabTextStyle}
                   activeTabStyle={styles.activeTabStyle}
                   activeTabTextStyle={styles.activeTabTextStyle}
-                  values={["Beginner", "Intermediate", "Advanced"]}
+                  values={["Beginner", "Basic", "Professional"]}
                   selectedIndex={this.state.selectedIndex}
                   onTabPress={this.handleIndexChange}
                 />

@@ -355,7 +355,7 @@ viewtextinsub:{
     flex:1,justifyContent: 'center',alignItems: 'flex-start',paddingLeft:15
 },
 textinsubmenu:{
-    color:'white',fontSize:25,fontWeight:'bold',paddingTop:40
+    color:'white',fontSize:25,fontWeight:'bold'
 },
 styleimgBtn:{
     width: '100%', height: 120,alignSelf:'center'
@@ -458,7 +458,7 @@ btnTime:{
 },
 // box data in program screen
 ViewbgPG:{
-    width: '100%', height: 120,alignSelf:'center'
+    width: '100%', height: 120,alignSelf:'center',
 },
 // กึ่งกลางแนวตั้ง และ ชิดขอบซ้าย
 centerYleftX:{
@@ -498,6 +498,10 @@ imgprofilesub:{
     width:50,
     height:50,
     borderRadius: 25
+},
+fontstest:{
+    fontSize: 40,
+    fontFamily: "PrintAble4U",
 }
 });
 

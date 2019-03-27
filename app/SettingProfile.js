@@ -60,7 +60,7 @@ class SettingProfile extends Component {
                   <Image
                     style={styles.imgUpload}
                     resizeMode='cover'
-                    source={{uri: 'https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg'}}
+                    source={require('../img/profile.jpg')}
                   />
                 </PhotoUpload>
                 <View style={styles.pt20}>

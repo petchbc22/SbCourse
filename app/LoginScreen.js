@@ -30,6 +30,12 @@ class LoginScreen extends Component {
 
     this.state = { isLoading: true }
   }
+  state = {
+    isModalVisible: false
+  };
+
+  _toggleModal = () =>
+    this.setState({ isModalVisible: !this.state.isModalVisible });
 
   performTimeConsumingTask = async() => {
     return new Promise((resolve) =>
@@ -87,9 +93,6 @@ class LoginScreen extends Component {
                           /> */}
                           <Text style={{color:'#fff',fontWeight:'bold',paddingTop:20}}>Sign in With Facebook</Text>
                       </View>
-                
-                        
-                      
                   </Tab>
                   <Tab 
                     heading=" Register" 

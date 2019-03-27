@@ -39,7 +39,7 @@ class Subcourseprogram extends Component {
             </Left>
             <Body>
                 <View>
-                    <Text style={[styles.textbold,styles.text_22]}>Programs</Text>
+                    <Text style={[styles.textbold,styles.text_22]}>Beginner</Text>
                 </View>
             </Body>
             <Right>
@@ -47,13 +47,12 @@ class Subcourseprogram extends Component {
             </Right>
             </Header>
             <Content style={[styles.bggray,styles.pd10]}>
-                <Text style={styles.textbold}>Introduction</Text>
-                <View style={[styles.pt10,styles.pb20]}>
+                <View style={[styles.pt10,styles.pb5]}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate("SubcourseIntroductionScreen")}>
-                        <ImageBackground source={require('../img/iStock-621134108-min.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
-                            <View style={[styles.flex_1,styles.flex_row]}>
+                        <ImageBackground source={require('../img/thumnail-1.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
                                 <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
-                                    <Text style={[styles.text_22,styles.textbold,styles.textwhite]}>Introduction Programs</Text>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>การตั้งค่าระบบการถ่ายวิดีโอในมือถือ (ค่ากลาง) </Text>
                                 </View>
                                 <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
                                     <View>
@@ -64,13 +63,12 @@ class Subcourseprogram extends Component {
                         </ImageBackground>
                     </TouchableOpacity>
                 </View>
-                <Text style={styles.textbold}>Calisthenics</Text>
-                <View style={{justifyContent:'center',paddingTop:10,paddingBottom:20}}>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:5}}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
-                        <ImageBackground source={require('../img/bg-fc.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
-                            <View style={[styles.flex_1,styles.flex_row]}>
+                        <ImageBackground source={require('../img/thumnail-2.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
                                 <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
-                                    <Text style={[styles.text_22,styles.textbold,styles.textwhite]}>Beginner Programs</Text>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>รู้จักโหมดต่างๆ ในมือถือ (ค่ากลาง)</Text>
                                 </View>
                                 <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
                                     <View>
@@ -81,13 +79,12 @@ class Subcourseprogram extends Component {
                         </ImageBackground>
                     </TouchableOpacity>
                 </View>
-                <Text style={styles.textbold}>Weighted</Text>
-                <View style={{justifyContent:'center',paddingTop:10,paddingBottom:20}}>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:5}}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
-                        <ImageBackground source={require('../img/bg-fc.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
-                            <View style={[styles.flex_1,styles.flex_row]}>
+                        <ImageBackground source={require('../img/thumnail-3.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
                                 <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
-                                    <Text style={[styles.text_22,styles.textbold,styles.textwhite]}>Calisthenics Programs</Text>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>ตัวช่วยต่างๆ สำหรับมือใหม่ เช่น ระบบกริด, Stabilizer </Text>
                                 </View>
                                 <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
                                     <View>
@@ -98,6 +95,103 @@ class Subcourseprogram extends Component {
                         </ImageBackground>
                     </TouchableOpacity>
                 </View>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:5}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
+                        <ImageBackground source={require('../img/thumnail-4.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
+                                <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>หลักการถ่ายวิดีโอที่ถูกต้อง</Text>
+                                </View>
+                                <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
+                                    <View>
+                                        <PercentageCircle radius={25} percent={0} color={"#3498db"} borderWidth={"4"} textStyle={{color:'#000',fontSize:18,fontWeight:'bold'}}></PercentageCircle>  
+                                    </View>
+                                </View>
+                            </View>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                </View>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:5}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
+                        <ImageBackground source={require('../img/iphone-7-jet-black-macro-3.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
+                                <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>ขนาดภาพต่างๆ ที่มือใหม่ต้องรู้จัก</Text>
+                                </View>
+                                <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
+                                    <View>
+                                        <PercentageCircle radius={25} percent={0} color={"#3498db"} borderWidth={"4"} textStyle={{color:'#000',fontSize:18,fontWeight:'bold'}}></PercentageCircle>  
+                                    </View>
+                                </View>
+                            </View>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                </View>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:5}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
+                        <ImageBackground source={require('../img/99c0cdd22914a0439f10e08dbfab640d_large.jpeg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
+                                <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>มุมกล้องต่างๆ ที่มือใหม่ต้องรู้จัก</Text>
+                                </View>
+                                <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
+                                    <View>
+                                        <PercentageCircle radius={25} percent={0} color={"#3498db"} borderWidth={"4"} textStyle={{color:'#000',fontSize:18,fontWeight:'bold'}}></PercentageCircle>  
+                                    </View>
+                                </View>
+                            </View>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                </View>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:5}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
+                        <ImageBackground source={require('../img/Darkroom-Hero-4.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
+                                <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>การเคลื่อนกล้องต่างๆ ที่มือใหม่ต้องรู้จัก</Text>
+                                </View>
+                                <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
+                                    <View>
+                                        <PercentageCircle radius={25} percent={0} color={"#3498db"} borderWidth={"4"} textStyle={{color:'#000',fontSize:18,fontWeight:'bold'}}></PercentageCircle>  
+                                    </View>
+                                </View>
+                            </View>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                </View>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:5}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
+                        <ImageBackground source={require('../img/iphone_6_camera_photo_hero_1.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
+                                <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>การเลือกโลเคชั่นที่เหมาะกับการถ่ายวิดีโอ</Text>
+                                </View>
+                                <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
+                                    <View>
+                                        <PercentageCircle radius={25} percent={0} color={"#3498db"} borderWidth={"4"} textStyle={{color:'#000',fontSize:18,fontWeight:'bold'}}></PercentageCircle>  
+                                    </View>
+                                </View>
+                            </View>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                </View>
+                <View style={{justifyContent:'center',paddingTop:5,paddingBottom:20}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("#")}>
+                        <ImageBackground source={require('../img/Hidden-Landscapes-on-iPhone7.jpg')} style={[styles.ViewbgPG]} imageStyle={{ borderRadius: 5 }}>
+                            <View style={[{backgroundColor: 'rgba(0,0,0,.6)',borderRadius: 5},styles.flex_1,styles.flex_row]}>
+                                <View style={[{width:'70%'},styles.centerYleftX,styles.pl15]}>
+                                    <Text style={[styles.text_18,styles.textbold,styles.textwhite]}>แสงที่เหมาะสมในการถ่ายวิดีโอ</Text>
+                                </View>
+                                <View style={[{width:'30%'},styles.centerYlrightX,styles.pr15]}>
+                                    <View>
+                                        <PercentageCircle radius={25} percent={0} color={"#3498db"} borderWidth={"4"} textStyle={{color:'#000',fontSize:18,fontWeight:'bold'}}></PercentageCircle>  
+                                    </View>
+                                </View>
+                            </View>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                </View>
+   
             </Content>
           </Container>
     );
