@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,TextInput,TouchableHighlight} from 'react-native';
+import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,TextInput,TouchableHighlight,StatusBar} from 'react-native';
 import { Title,Body,Header,Container, Content, Footer, FooterTab, Button,Tab, Tabs, TabHeading, Icon, Text ,ScrollableTab,Form, Item, Input, Label,Left,Right   } from 'native-base';
 // import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { StackNavigator, TabNavigator, DrawerNavigator,NavigationActions  } from  'react-navigation';
+import { StackNavigator, TabNavigator, DrawerNavigator,NavigationActions ,StackActions  } from  'react-navigation';
 import styles from './customstyle';
 import SegmentedControlTab from "react-native-segmented-control-tab";
 import CircleButton from 'react-native-circle-button';
@@ -29,7 +29,18 @@ class SettingProfile extends Component {
       selectedIndex: index
     });
     };
-
+    // function RESET Stack Nav ให้กลับไปสู่หน้าที่เราต้องการจะไป โดยที่จะ back button กลับมาหน้านี้ไม่ได้ เป็นการ reset to top stack
+    reset = () => {
+      const { navigate } = this.props.navigation
+      const resetAction = NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'LoginScreen' })
+        ],
+        key: null
+      });
+      this.props.navigation.dispatch(resetAction);
+    }
   render() {
       const {goBack} = this.props.navigation;
     return (
@@ -116,14 +127,14 @@ class SettingProfile extends Component {
                   />
                 </View>
               </View>
-              <View style={styles.listProfile}>
+              <TouchableOpacity style={styles.listProfile} onPress={this.reset}>
                 <View style={styles.col1_listpf}>
                     <Text style={[styles.text_14,styles.text_black]}>Logout</Text>
                 </View>
                 <View style={styles.col2_listpf}>
                   <Icon name='arrow-forward' style={styles.iconinput} /> 
                 </View>
-              </View>
+              </TouchableOpacity>
               <View style={styles.listProfile}>
                 <View style={styles.col1_listpf}>
                     <Text style={[styles.text_14,styles.text_black]}>Change Password</Text>

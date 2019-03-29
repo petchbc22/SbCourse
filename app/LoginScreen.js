@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity } from 'react-native';
+import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,Alert } from 'react-native';
 import { Container, Content, Footer, FooterTab, Button,Tab, Tabs, TabHeading, Icon, Text ,ScrollableTab,Form, Item, Input, Label   } from 'native-base';
 import { StackNavigator, TabNavigator, DrawerNavigator  } from  'react-navigation';
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 import { SocialIcon } from 'react-native-elements'
 
 class SplashScreen extends React.Component {
@@ -34,8 +35,6 @@ class LoginScreen extends Component {
     isModalVisible: false
   };
 
-  _toggleModal = () =>
-    this.setState({ isModalVisible: !this.state.isModalVisible });
 
   performTimeConsumingTask = async() => {
     return new Promise((resolve) =>

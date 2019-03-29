@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,TouchableHighlight} from 'react-native';
+import {View,StyleSheet,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,TouchableHighlight,StatusBar} from 'react-native';
 import { Title,Body,Header,Container, Content, Footer, FooterTab, Button,Tab, Tabs, TabHeading, Icon, Text ,ScrollableTab,Form, Item, Input, Label,Left,Right   } from 'native-base';
 import { StackNavigator, TabNavigator, DrawerNavigator,NavigationActions  } from  'react-navigation';
 import styles from './customstyle'

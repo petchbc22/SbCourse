@@ -1,4 +1,4 @@
-import { StyleSheet ,Dimensions } from 'react-native';
+import { StyleSheet ,Dimensions,StatusBar } from 'react-native';
 
 const BASE_SIZE = 300
 const DeviceWidth = Dimensions.get('window').width
@@ -30,11 +30,11 @@ itemCenter:{
 },
 // ส่วนheader สำหรับ header ที่ไม่มี background 
 header_nobg:{
-    backgroundColor:'transparent',elevation:0,height:80,paddingTop:30
+    backgroundColor:'transparent',elevation:0, marginTop: StatusBar.currentHeight,
 },
 // ส่วนheader สำหรับ header มี borderbottom 
 header_with_bdb:{
-    backgroundColor:'transparent',height:80,paddingTop:30
+    backgroundColor:'transparent', marginTop: StatusBar.currentHeight,
 },
 header_not_set_h:{
     backgroundColor:'transparent',elevation:0

@@ -81,6 +81,7 @@
 		CA67889B9BF84B49946FF529 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F23FC2E26AC48F38A5EFE95 /* SimpleLineIcons.ttf */; };
 		BEA46DBCF24144F6A40E35EA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB378361F30427DA2475B00 /* Zocial.ttf */; };
 		7D953CC341654CFE90B93202 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25074CFAB5A647EEB11A4AF5 /* libAirMaps.a */; };
+		DD6D069D863A42BC9533CF4A /* PrintAble4U Regular ver 1.00.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A210EDFFC8BD4F0E875110CD /* PrintAble4U Regular ver 1.00.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,6 +437,7 @@
 		0AB378361F30427DA2475B00 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7945D8870CC1416D90BBC1FA /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		25074CFAB5A647EEB11A4AF5 /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A210EDFFC8BD4F0E875110CD /* PrintAble4U Regular ver 1.00.ttf */ = {isa = PBXFileReference; name = "PrintAble4U Regular ver 1.00.ttf"; path = "../assets/fonts/PrintAble4U Regular ver 1.00.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -752,6 +754,7 @@
 				0A93BF55269746A7AE16C978 /* rubicon-icon-font.ttf */,
 				9F23FC2E26AC48F38A5EFE95 /* SimpleLineIcons.ttf */,
 				0AB378361F30427DA2475B00 /* Zocial.ttf */,
+				A210EDFFC8BD4F0E875110CD /* PrintAble4U Regular ver 1.00.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1238,6 +1241,7 @@
 				857C3469FDCB4763A09A391A /* rubicon-icon-font.ttf in Resources */,
 				CA67889B9BF84B49946FF529 /* SimpleLineIcons.ttf in Resources */,
 				BEA46DBCF24144F6A40E35EA /* Zocial.ttf in Resources */,
+				DD6D069D863A42BC9533CF4A /* PrintAble4U Regular ver 1.00.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

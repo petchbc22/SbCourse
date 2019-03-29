@@ -3,10 +3,11 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 import { fromRight } from 'react-navigation-transitions';
 import LoginScreen from './app/LoginScreen';
-import HomeScreen from './app/HomeScreen';
+import  HomeScreen from './app/HomeScreen';
+import  ProfileScreen  from './app/HomeScreen';
 import Subcoursefrist from './app/Subcoursefrist';
-import Subcourseprogram from './app/Subcourseprogram';
-import Subcoursetechnic from './app/Subcoursetechnic';
+import Course_beginner from './app/Course_beginner';
+import Course_basic from './app/Course_basic';
 // ChildScreen
 import VideolearnScreen from './app/VideolearnScreen';
 import SubcourseIntroductionScreen from './app/SubcourseIntroductionScreen';
@@ -17,7 +18,7 @@ import FollowingScreen from './app/FollowingScreen';
 import AboutScreen from './app/AboutScreen';
 import Profile from './app/Profile';
 import PullupSubScreen from './app/PullupSubScreen';
-import Subcourseprofessional from './app/Subcourseprofessional';
+import Course_pro from './app/Course_pro';
 const App = StackNavigator({
   LoginScreen: { 
       screen: LoginScreen,
@@ -26,18 +27,21 @@ const App = StackNavigator({
     HomeScreen: { 
       screen: HomeScreen,
       navigationOptions : { header: null },
-
+    },
+    ProfileScreen: { 
+      screen: ProfileScreen,
+      navigationOptions : { header: null },
     },
     Subcoursefrist: { 
       screen: Subcoursefrist,
       navigationOptions : { header: null },
     },
-    Subcourseprogram: { 
-      screen: Subcourseprogram,
+    Course_beginner: { 
+      screen: Course_beginner,
       navigationOptions : { header: null },
     },
-    Subcoursetechnic: { 
-      screen: Subcoursetechnic,
+    Course_basic: { 
+      screen: Course_basic,
       navigationOptions : { header: null },
     },
     VideolearnScreen: { 
@@ -78,15 +82,15 @@ const App = StackNavigator({
       screen: PullupSubScreen,
       navigationOptions : { header: null },
     } ,
-    Subcourseprofessional: {
-      screen: Subcourseprofessional,
+    Course_pro: {
+      screen: Course_pro,
       navigationOptions : { header: null },
     }
 },
 {
   initialRouteName: 'LoginScreen',
   transitionConfig: () => fromRight(),
-   headerMode: 'none',
+  headerMode: 'none'
 },
 )
 

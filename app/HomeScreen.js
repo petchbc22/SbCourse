@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,StyleSheet,FlatList,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,Text ,RefreshControl } from 'react-native';
+import { View,StyleSheet,FlatList,Image,WebView,ImageBackground,ScrollView,Dimensions,KeyboardAvoidingView,TouchableOpacity,Text ,RefreshControl,StatusBar } from 'react-native';
 import { TabNavigator,StackNavigator } from 'react-navigation';
 import { Header,Container,Content,Card, CardItem, Thumbnail, Footer, Tab, Tabs,FooterTab, Button,Input,Item, Icon } from 'native-base'
 import styles from './customstyle';
@@ -48,7 +48,7 @@ class CourseScreen extends React.Component {
                             <Text style={[styles.pd10 , styles.text_16, styles.text_black,styles.textbold]}>Level</Text>
 
                             <View style={styles.imagebutton}>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate("Subcourseprogram")}>
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate("Course_beginner")}>
                                     <ImageBackground source={require('../img/iStock-621134108-min.jpg')} style={styles.styleimgBtn} imageStyle={{ borderRadius: 5 }}>
                                         <View style={styles.viewtextinsub}>
                                             <Text style={styles.textinsubmenu}>Beginner</Text>
@@ -58,7 +58,7 @@ class CourseScreen extends React.Component {
                             </View>
 
                             <View style={[styles.imagebutton,styles.pt15,styles.pb15]}>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate("Subcoursetechnic")}>
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate("Course_basic")}>
                                     <ImageBackground source={require('../img/TS_76.jpg')} style={styles.styleimgBtn} imageStyle={{ borderRadius: 5 }}>
                                         <View style={styles.viewtextinsub}>
                                             <Text style={styles.textinsubmenu}>Basic</Text>
@@ -67,7 +67,7 @@ class CourseScreen extends React.Component {
                                 </TouchableOpacity>
                             </View>
                             <View style={[styles.imagebutton,styles.pb15]}>
-                                <TouchableOpacity onPress={() => this.props.navigation.navigate("Subcourseprofessional")}>
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate("Course_pro")}>
                                     <ImageBackground source={require('../img/mobile-pic-1.jpg')} style={styles.styleimgBtn} imageStyle={{ borderRadius: 5 }}>
                                         <View style={styles.viewtextinsub}>
                                             <Text style={styles.textinsubmenu}>Professional </Text>
